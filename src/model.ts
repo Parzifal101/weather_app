@@ -14,5 +14,13 @@ export interface IWeather {
         time:Array<string>,
         uv_index_max:Array<number>,
         weathercode:Array<number>,
+    },
+    hourly:{
+        pressure_msl:Array<number>,
+        relativehumidity_2m:Array<number>,
+        time:Array<string>,
+        visibility:Array<number>,
+        winddirection_120m:Array<number>,
+        windspeed_120m:Array<number>,
     }
 }

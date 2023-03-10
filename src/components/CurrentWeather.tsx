@@ -12,7 +12,8 @@ interface WwCodes {
 }
 export function CurrentWeather({ weather, wwCode, loadStatus }: WeatherProps) {
     const date = new Date();
-
+    
+        
     return (
         <div className={loadStatus ? styles.currentWeather__load : styles.currentWeather}>
             <div className={styles.currentWeather__visual}>

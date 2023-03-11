@@ -58,7 +58,7 @@ function App() {
       const lon: number = 37.42;
       // const urlTimezone:RegExpMatchArray|null = timezone[0].match(/\w+[^\/]/gi);
 
-      const res = await axios.get<IWeather>(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=windspeed_120m,winddirection_120m,relativehumidity_2m,pressure_msl,visibility&daily=weathercode,temperature_2m_max,apparent_temperature_max,sunrise,sunset,uv_index_max&timezone=${timezone}&current_weather=true`);
+      const res = await axios.get<IWeather>(`https://ap.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=windspeed_120m,winddirection_120m,relativehumidity_2m,pressure_msl,visibility&daily=weathercode,temperature_2m_max,apparent_temperature_max,sunrise,sunset,uv_index_max&timezone=${timezone}&current_weather=true`);
       console.log(res.data);
 
 
@@ -80,7 +80,7 @@ function App() {
 
   }, [cords]);
   useEffect(() => {
-    console.log(addInfo.humidity);
+    // console.log(addInfo.humidity);
 
   }, [addInfo]);
   useEffect(() => {
@@ -230,7 +230,7 @@ function App() {
                     <h1>{addInfo.pressure}<span>Pa</span></h1>
                     <div className="pres__bar">
                       <div className="bar__wrapper">
-                        <div style={{ height: `${100 - addInfo.humidity}%` }}></div>
+                        <div style={{ height: `${100 - Math.abs(((1070-addInfo.pressure)/140-1)*100)}%` }}></div>
                       </div>
                     </div>
                     <div className="pres__legend">

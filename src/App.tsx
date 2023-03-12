@@ -54,11 +54,11 @@ function App() {
 
       // const lat: number = geo.data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.match(/[0-9]+\.[0-9]+/gi)[1];
       // const lon: number = geo.data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.match(/[0-9]+\.[0-9]+/gi)[0];
-      const lat: number = 55.36;
-      const lon: number = 37.42;
+      const lat: number = 55.755865;
+      const lon: number = 37.617520;
       // const urlTimezone:RegExpMatchArray|null = timezone[0].match(/\w+[^\/]/gi);
 
-      const res = await axios.get<IWeather>(`https://ap.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=windspeed_120m,winddirection_120m,relativehumidity_2m,pressure_msl,visibility&daily=weathercode,temperature_2m_max,apparent_temperature_max,sunrise,sunset,uv_index_max&timezone=${timezone}&current_weather=true`);
+      const res = await axios.get<IWeather>(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=windspeed_120m,winddirection_120m,relativehumidity_2m,pressure_msl,visibility&daily=weathercode,temperature_2m_max,apparent_temperature_max,sunrise,sunset,uv_index_max&timezone=${timezone}&current_weather=true`);
       console.log(res.data);
 
 
@@ -70,7 +70,7 @@ function App() {
       const e = error as AxiosError;
       setLoader(false);
       setError(e.message);
-      console.log('OOOOPS... ERROR!');
+      console.error('OOOOPS... ERROR!');
     }
 
   }
@@ -97,7 +97,7 @@ function App() {
   );
 
   return (
-    <div style={{ height: screenHeight }} className='container'>
+    <div  className='container'>
       <div className='left-side__menu'>
         <Search fetch={fetchData} setValue={setSearchValue} />
         <div style={{ backgroundColor: '#dbdbdb', width: '100%' }}>
@@ -105,8 +105,8 @@ function App() {
         </div>
         <CurrentWeather weather={weather} wwCode={wwCode} loadStatus={loader} />
         <div className={loader ? "choosen-city__load" : "choosen-city"}>
-          <YMaps>
-            <Map state={mapState} modules={["control.ZoomControl", "control.FullscreenControl"]}>
+          <YMaps >
+            <Map  state={mapState} modules={["control.ZoomControl", "control.FullscreenControl"]}>
               <Placemark geometry={[cords[0], cords[1]]} />
             </Map>
           </YMaps>
@@ -136,15 +136,17 @@ function App() {
               <option value="Pacific/Auckland">Pacific/Auckland</option>
             </select>
           </div>
-          <div className='weekForecast'>
-            {weather.daily.temperature_2m_max.map((item, i) => <DayForecast weather={weather} setAddInfo={setAddInfo} my_key={i} weekday={i} weathercode={weather.daily.weathercode[i]} temp={item} appar_temp={weather.daily.apparent_temperature_max[i]} key={i} />)}
+          <div draggable onDragStart={e => console.log(e)} className='weekForecast'>
+            <div className="week__scroll">
+              {weather.daily.temperature_2m_max.map((item, i) => <DayForecast weather={weather} setAddInfo={setAddInfo} my_key={i} weekday={i} weathercode={weather.daily.weathercode[i]} temp={item} appar_temp={weather.daily.apparent_temperature_max[i]} key={i} />)}
+            </div>
           </div>
           <div className="addInfo">
             <h3>Additional Information</h3>
             <div className="addInfo__firstRow">
               {/* ВЫНОСИМ МОДУЛИ В ОТДЕЛЬНЫЕ КОМПОНЕНТЫ */}
 
-              <div className="addInfo__module">
+              <div className="addInfo__module mobile__addInfo__uv">
                 <h4>UV Index</h4>
                 <div className="module__uvIndex">
                   <span className='uvIndex1'>0</span>
@@ -164,7 +166,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="addInfo__module">
+              <div className="addInfo__module mobile__addInfo__wind">
                 <h4>Wind Status</h4>
                 <div className="module__wind">
                   <h1>{addInfo.windspeed_120m}<span>km/h</span></h1>
@@ -174,7 +176,7 @@ function App() {
                   <span>WIND DIRECTION</span>
                 </div>
               </div>
-              <div className="addInfo__module">
+              <div className="addInfo__module mobile__addInfo__sunrise">
                 <h4>Sunrise & Sunset</h4>
                 <div className="module__sunrise">
                   <div className="sunrise__imgWrapper"><img src={process.env.PUBLIC_URL + '/img/sunrise.png'} alt="" /></div>
@@ -195,7 +197,7 @@ function App() {
             </div>
             <div className="addInfo__firstRow">
 
-              <div className="addInfo__module">
+              <div id='mobile__addInfo__humidity' className="addInfo__module ">
                 <h4>Humidity</h4>
                 <div className="module__humidity">
                   <div className="humidty_value">
@@ -214,7 +216,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="addInfo__module">
+              <div id='mobile__addInfo__visibility' className="addInfo__module">
                 <h4>Visibility</h4>
                 <div className="module__visibility">
                   <div className="visibility__value">
@@ -223,7 +225,7 @@ function App() {
                 </div>
 
               </div>
-              <div className="addInfo__module">
+              <div className="addInfo__module mobile__addInfo__pres">
                 <h4>Pressure</h4>
                 <div  className="module__pres">
                   <div  className="pres_value">

@@ -35,9 +35,6 @@ export function DayForecast({weekday,weathercode,temp,appar_temp,my_key,setAddIn
       const pressure = findAverage(weather.hourly.pressure_msl);
       const visibility_km = visibility_m.map(value => (value/1000).toFixed(1));
       
-      console.log(visibility_km);
-      
-
       setAddInfo({sunrise:weather.daily.sunrise[index],sunset:weather.daily.sunset[index],uv_index_max:weather.daily.uv_index_max[index],windspeed_120m:windspeed[index],winddirection:winddirection[index],humidity:humidty[index],visibility:visibility_km[index],pressure:pressure[index]})
     }
     useEffect(()=>{

@@ -10,7 +10,6 @@
 
     .left-side__menu {
         width: 16%;
-        height: 100%;
         background-color: white;
         padding: 2rem 4rem 2rem 4rem;
         // position: relative;
@@ -203,7 +202,12 @@
                 display: flex;
                 justify-content: space-between;
                 margin-top: 2rem;
-
+                .week__scroll{
+                    width: 100%;
+                    height: 240px;
+                    display: flex;
+                    justify-content: space-between;
+                }
                 .weekForecast__day {
                     width: 13%;
                     height: 200px;
@@ -681,18 +685,21 @@
     }
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:430px){
     .container {
         width: 100%;
-        background-color: #1c1c3f;
+        height: 100%;
+        background-color: #f0f0f3;
         top: 0px;
         display: flex;
-    
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
         .left-side__menu {
-            width: 100%;
+            width: 80%;
             height: 100%;
             background-color: white;
-            padding: 2rem 4rem 2rem 4rem;
+            padding: 2rem 3rem 2rem 3rem;
             // position: relative;
             // float: left;
             // transition: all 1s ease-out;
@@ -701,649 +708,710 @@
             // }
         }
     
-        // .current-weather {
-        //     width: 100%;
-        //     // height: 480px;
-        //     margin-top: 3rem;
+        .current-weather {
+            width: 100%;
+            // height: 480px;
+            margin-top: 3rem;
     
-        //     hr {
-        //         border: none;
-        //         background-color: #dbdbdb;
-        //         width: 100%;
-        //         height: 1px;
-        //         border-top: 0.5px solid #ffffff;
-        //         margin-top: 12%;
-        //     }
+            hr {
+                border: none;
+                background-color: #dbdbdb;
+                width: 100%;
+                height: 1px;
+                border-top: 0.5px solid #ffffff;
+                margin-top: 12%;
+            }
     
-        //     .current-weather__visual {
-        //         // background: url(../public/img/sunny.png) no-repeat;
-        //         // background-position: left;
-        //         // background-size: contain;
-        //         width: 100%;
-        //         height: 260px;
-        //         display: flex;
-        //         align-items: center;
-        //         justify-content: center;
+            .current-weather__visual {
+                // background: url(../public/img/sunny.png) no-repeat;
+                // background-position: left;
+                // background-size: contain;
+                width: 100%;
+                height: 260px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
     
-        //         img {
-        //             width: 90%;
-        //             height: 90%;
-        //             object-fit: contain;
-        //         }
-        //     }
+                img {
+                    width: 90%;
+                    height: 90%;
+                    object-fit: contain;
+                }
+            }
     
-        //     .current-weather__temp {
-        //         p {
-        //             margin: 4% 0 0 0;
-        //             font-size: 78px;
+            .current-weather__temp {
+                p {
+                    margin: 4% 0 0 0;
+                    font-size: 78px;
     
-        //             span {
-        //                 font-size: 48px;
-        //                 position: relative;
-        //                 top: -22px;
-        //             }
-        //         }
-        //     }
+                    span {
+                        font-size: 48px;
+                        position: relative;
+                        top: -22px;
+                    }
+                }
+            }
     
-        //     .current-weather__date {
-        //         p {
-        //             font-size: 18px;
-        //             font-weight: 500;
+            .current-weather__date {
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
     
-        //             span {
-        //                 opacity: 0.5;
-        //             }
-        //         }
-        //     }
+                    span {
+                        opacity: 0.5;
+                    }
+                }
+            }
     
-        //     .current-weather__param {
-        //         margin-top: 8%;
-        //         width: 100%;
+            .current-weather__param {
+                margin-top: 8%;
+                width: 100%;
     
-        //         .param__wwcode {
-        //             display: flex;
-        //             width: 100%;
-        //             align-items: center;
-        //             margin-top: 2rem;
+                .param__wwcode {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    margin-top: 2rem;
     
-        //             span {
-        //                 font-size: 16px;
-        //                 margin-left: 0.6rem;
-        //             }
+                    span {
+                        font-size: 16px;
+                        margin-left: 0.6rem;
+                    }
     
-        //             .param__icon-wrapper {
-        //                 display: inline-block;
-        //                 width: 16px;
-        //                 height: 16px;
+                    .param__icon-wrapper {
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
     
-        //                 img {
-        //                     width: 100%;
-        //                     height: 100%;
-        //                     object-fit: contain;
-        //                 }
-        //             }
-        //         }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
     
-        //         .param__rain {
-        //             display: flex;
-        //             width: 100%;
-        //             align-items: center;
-        //             margin-top: 1rem;
+                .param__rain {
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    margin-top: 1rem;
     
-        //             span {
-        //                 font-size: 16px;
-        //                 margin-left: 0.6rem;
-        //             }
+                    span {
+                        font-size: 16px;
+                        margin-left: 0.6rem;
+                    }
     
-        //             .param__icon-wrapper {
-        //                 display: inline-block;
-        //                 width: 16px;
-        //                 height: 16px;
+                    .param__icon-wrapper {
+                        display: inline-block;
+                        width: 16px;
+                        height: 16px;
     
-        //                 img {
-        //                     width: 100%;
-        //                     height: 100%;
-        //                     object-fit: contain;
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
     
-        // .choosen-city {
-        //     width: 100%;
-        //     height: 186px;
-        //     border-radius: 18px;
-        //     overflow: hidden;
-        //     text-align: center;
-        //     margin-top: 3rem;
-        // }
+        .choosen-city {
+            width: 100%;
+            height: 186px;
+            border-radius: 18px;
+            overflow: hidden;
+            text-align: center;
+            margin-top: 3rem;
+        }
     
-        // .choosen-city__load {
-        //     width: 100%;
-        //     height: 186px;
-        //     border-radius: 18px;
-        //     overflow: hidden;
-        //     text-align: center;
-        //     margin-top: 3rem;
-        //     background-color: #dbdbdb;
-        //     border-radius: 12px;
-        //     transition: all 1s ease-out;
-        //     animation: blinking 2s linear infinite;
-        // }
+        .choosen-city__load {
+            width: 100%;
+            height: 186px;
+            border-radius: 18px;
+            overflow: hidden;
+            text-align: center;
+            margin-top: 3rem;
+            background-color: #dbdbdb;
+            border-radius: 12px;
+            transition: all 1s ease-out;
+            animation: blinking 2s linear infinite;
+        }
     
-        // .rightSection {
-        //     width: 100%;
-        //     padding: 2rem;
-        //     padding-left: 4rem;
-        //     padding-right: 4rem;
+        .rightSection {
+            width: 100%;
+            padding: 2rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
     
-        //     .rightSection__wrapper {
-        //         width: 100%;
-        //         height: 100%;
+            .rightSection__wrapper {
+                width: 100%;
+                height: 100%;
+                
+                .wellcome {
+                    font-size: 22px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+                    align-items: center;
+                    margin-right: 0px;
+                    h1 {
+                        margin: 0px;
+                        font-size: 32px;
+                        span {
+                            font-size: 28px;
+                            font-weight: 500;
+                        }
+                    }
     
-        //         .wellcome {
-        //             font-size: 22px;
-        //             display: flex;
-        //             width: 100%;
-        //             align-items: center;
+                    select {
+                        display: block;
+                        width: 220px;
+                        border: none;
+                        height: 40px;
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-left: 1rem;
+                        margin-top: 18px;
+                        background-color: #fff;
+                        border-radius: 6px;
+                        outline: none;
     
-        //             h1 {
-        //                 display: inline;
-        //                 margin: 0px;
+                        option {
+                            border: none;
+                            font-size: 16px;
+                        }
+                    }
+                }
     
-        //                 span {
-        //                     font-size: 32px;
-        //                     font-weight: 400;
-        //                 }
-        //             }
+                .weekForecast {
+                    width: 364px;
+                    display: flex;
+                    margin-top: 2rem;
+                    overflow: hidden;
+                    
+                    .week__scroll{
+                        width: 100%;
+                        height: 240px;
+
+                    }
+                    .weekForecast__day {
+                        width: 100%;
+                        height: 240px;
+                        background-color: #ffffff;
+                        border-radius: 12px;
+                        text-align: center;
+                        cursor: pointer;
+                        transition: 0.5s ease-out;
+                        margin-right: 2rem;
+                        display: inline-block;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
     
-        //             select {
-        //                 display: inline-block;
-        //                 width: 220px;
-        //                 border: none;
-        //                 height: 40px;
-        //                 font-size: 16px;
-        //                 font-weight: 600;
-        //                 margin-left: 1rem;
-        //                 margin-top: 18px;
-        //                 background-color: #fff;
-        //                 border-radius: 6px;
-        //                 outline: none;
+                        .weekForecast__imgWrapper {
+                            width: 100%;
+                            height: 94px;
     
-        //                 option {
-        //                     border: none;
-        //                     font-size: 16px;
-        //                 }
-        //             }
-        //         }
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            }
+                        }
     
-        //         .weekForecast {
-        //             width: 100%;
-        //             display: flex;
-        //             justify-content: space-between;
-        //             margin-top: 2rem;
+                        h3 {
+                            font-weight: 500;
+                            font-size: 20px;
+                        }
     
-        //             .weekForecast__day {
-        //                 width: 13%;
-        //                 height: 200px;
-        //                 background-color: #ffffff;
-        //                 border-radius: 12px;
-        //                 text-align: center;
-        //                 cursor: pointer;
-        //                 transition: 0.5s ease-out;
+                        p {
+                            font-weight: 500;
+                            font-size: 20px;
     
-        //                 &:hover {
-        //                     transform: scale(1.1);
-        //                 }
+                            span {
+                                opacity: 0.4;
+                            }
+                        }
+                    }
+                }
     
-        //                 .weekForecast__imgWrapper {
-        //                     width: 100%;
-        //                     height: 64px;
+                .addInfo {
+                    width: 100%;
+                    margin-top: 1rem;
     
-        //                     img {
-        //                         width: 100%;
-        //                         height: 100%;
-        //                         object-fit: contain;
-        //                     }
-        //                 }
+                    .addInfo__firstRow {
+                        display: block;
+                        justify-content: space-between;
+                        margin-top: 2rem;
+                        .mobile__addInfo__uv{
+                            width: 88%;
+                            margin-bottom: 2rem;
+                        }
+                        .mobile__addInfo__wind{
+                            width: 88%;
+                            margin-bottom: 2rem;
+                        }
+                        .mobile__addInfo__sunrise{
+                            width: 88%;
+                        }
+                        #mobile__addInfo__humidity{
+                            width: 52%;
+                            h4{
+                                margin-left: 2rem;
+                            }
+                            .module__humidity{
+                                padding-left: 2rem;
+                                .humidty_value{
+                                    h1{
+                                        font-size: 64px;
+                                        display: inline-block;
+                                        span{
+                                            font-size: 26px;
+                                            top: -29px;
+                                        }
+                                    }
+                                    .humidity__legend{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                        #mobile__addInfo__visibility{
+                            width: 32%;
+                            margin-left: 1rem;
+                            text-align: center;
+                            .module__visibility{
+                                padding-left: 12px;
+                                margin-top: 5rem;
+                                text-align: center;
+                            }
+                            h4{
+                                margin-left: 0px;
+                            }
+                            h1{
+                                font-size: 42px;
+                                margin: 0px;
+                                span{
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        .mobile__addInfo__pres{
+                            width: 88%;
+                            margin-top: 2rem;
+                        }
+                        .addInfo__module {
+                            height: 240px;
+                            background-color: #fff;
+                            border-radius: 16px;
+                            display: inline-block;
+                            h4 {
+                                font-size: 18px;
+                                font-weight: 500;
+                                margin-left: 2.5rem;
+                                opacity: 0.5;
+                            }
     
-        //                 h3 {
-        //                     font-weight: 500;
-        //                     font-size: 20px;
-        //                 }
+                            .module__sunrise {
+                                padding-left: 2.5rem;
+                                display: flex;
+                                align-items: center;
+                                margin-top: 1rem;
     
-        //                 p {
-        //                     font-weight: 500;
-        //                     font-size: 20px;
+                                .sunrise__imgWrapper {
+                                    width: 64px;
+                                    height: 64px;
     
-        //                     span {
-        //                         opacity: 0.4;
-        //                     }
-        //                 }
-        //             }
-        //         }
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }
     
-        //         .addInfo {
-        //             width: 100%;
-        //             margin-top: 1rem;
+                                .sunrise__time {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    margin-left: 2rem;
     
-        //             .addInfo__firstRow {
-        //                 display: flex;
-        //                 justify-content: space-between;
-        //                 margin-top: 2rem;
+                                    p {
+                                        font-size:22px;
+                                        font-weight: 500;
+                                        margin: 0px;
+                                    }
+                                }
     
-        //                 .addInfo__module {
-        //                     width: 28%;
-        //                     height: 240px;
-        //                     background-color: #fff;
-        //                     border-radius: 16px;
+                            }
+                            
+                            
+                            .module__wind {
+                                display: flex;
+                                align-items: center;
+                                padding-left: 2.5rem;
+                                margin-bottom: 1rem;
+                                h1 {
+                                    font-size: 64px;
+                                    font-weight: 400;
+                                    margin: 0px;
     
-        //                     h4 {
-        //                         font-size: 18px;
-        //                         font-weight: 500;
-        //                         margin-left: 2.5rem;
-        //                         opacity: 0.5;
-        //                     }
+                                    span {
+                                        font-size: 32px;
+                                        font-weight: 400;
+                                        margin-left: 1rem;
+                                    }
+                                }
     
-        //                     .module__sunrise {
-        //                         padding-left: 2.5rem;
-        //                         display: flex;
-        //                         align-items: center;
-        //                         margin-top: 1rem;
+                                .wind__imgWrapper {
+                                    width: 32px;
+                                    height: 32px;
     
-        //                         .sunrise__imgWrapper {
-        //                             width: 64px;
-        //                             height: 64px;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }
+                            }
     
-        //                             img {
-        //                                 width: 100%;
-        //                                 height: 100%;
-        //                                 object-fit: contain;
-        //                             }
-        //                         }
+                            .module__windDir {
+                                display: flex;
+                                align-items: center;
+                                padding-left: 2.5rem;
+                                margin-bottom: 1rem;
     
-        //                         .sunrise__time {
-        //                             display: flex;
-        //                             flex-direction: column;
-        //                             justify-content: center;
-        //                             margin-left: 2rem;
+                                span {
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    margin-left: 1rem;
+                                }
     
-        //                             p {
-        //                                 font-size:22px;
-        //                                 font-weight: 500;
-        //                                 margin: 0px;
-        //                             }
-        //                         }
+                                .wind__imgWrapper {
+                                    width: 32px;
+                                    height: 32px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    transform: rotate(0deg);
+                                    transition: 0.5s all ease-in;
+                                    border: 3px solid #dbdbdb;
+                                    padding: 2%;
+                                    border-radius: 50%;
+                                    img {
+                                        width: 80%;
+                                        height: 80%;
+                                        object-fit: contain;
+                                    }
+                                }
+                            }
+                            .module__uvIndex {
+                                display: flex;
+                                align-items: center;
+                                padding-left: 2.5rem;
+                                margin-bottom: 1.5rem;
     
-        //                     }
-    
-        //                     .module__wind {
-        //                         display: flex;
-        //                         align-items: center;
-        //                         padding-left: 2.5rem;
-        //                         margin-bottom: 1rem;
-    
-        //                         h1 {
-        //                             font-size: 64px;
-        //                             font-weight: 400;
-        //                             margin: 0px;
-    
-        //                             span {
-        //                                 font-size: 32px;
-        //                                 font-weight: 400;
-        //                                 margin-left: 1rem;
-        //                             }
-        //                         }
-    
-        //                         .wind__imgWrapper {
-        //                             width: 32px;
-        //                             height: 32px;
-    
-        //                             img {
-        //                                 width: 100%;
-        //                                 height: 100%;
-        //                                 object-fit: contain;
-        //                             }
-        //                         }
-        //                     }
-    
-        //                     .module__windDir {
-        //                         display: flex;
-        //                         align-items: center;
-        //                         padding-left: 2.5rem;
-        //                         margin-bottom: 1rem;
-    
-        //                         span {
-        //                             font-size: 16px;
-        //                             font-weight: 500;
-        //                             margin-left: 1rem;
-        //                         }
-    
-        //                         .wind__imgWrapper {
-        //                             width: 32px;
-        //                             height: 32px;
-        //                             display: flex;
-        //                             justify-content: center;
-        //                             align-items: center;
-        //                             transform: rotate(0deg);
-        //                             transition: 0.5s all ease-in;
-        //                             border: 3px solid #dbdbdb;
-        //                             padding: 2%;
-        //                             border-radius: 50%;
-        //                             img {
-        //                                 width: 80%;
-        //                                 height: 80%;
-        //                                 object-fit: contain;
-        //                             }
-        //                         }
-        //                     }
-        //                     .module__uvIndex {
-        //                         display: flex;
-        //                         align-items: center;
-        //                         padding-left: 2.5rem;
-        //                         margin-bottom: 1.5rem;
-    
-        //                         span {
-        //                             font-size: 16px;
-        //                             font-weight: 500;
+                                span {
+                                    font-size: 16px;
+                                    font-weight: 500;
                                     
-        //                         }
-        //                         .uvIndex1{
-        //                             position: absolute;
-        //                             top: 572px;
-        //                             left: 527px;
-        //                             font-size: 18px;
-        //                             opacity: 0.4;
-        //                         }
-        //                         .uvIndex2{
-        //                             position: absolute;
-        //                             top: 462px;
-        //                             left: 596px;
-        //                             font-size: 18px;
-        //                             opacity: 0.4;
-        //                         }
-        //                         .uvIndex3{
-        //                             position: absolute;
-        //                             top: 462px;
-        //                             left: 743px;
-        //                             font-size: 18px;
-        //                             opacity: 0.4;
-        //                         }
-        //                         .uvIndex4{
-        //                             position: absolute;
-        //                             top: 572px;
-        //                             left: 800px;
-        //                             font-size: 18px;
-        //                             opacity: 0.4;
-        //                         }
-        //                         .wind__imgWrapper {
-        //                             width: 32px;
-        //                             height: 32px;
-        //                             transform: rotate(0deg);
-        //                             transition: 1s all ease-in;
-        //                             img {
-        //                                 width: 100%;
-        //                                 height: 100%;
-        //                                 object-fit: contain;
-        //                             }
-        //                         }
+                                }
+                                .uvIndex1{
+                                    position: absolute;
+                                    top: 1632px;
+                                    left: 68px;
+                                    font-size: 18px;
+                                    opacity: 0.4;
+                                }
+                                .uvIndex2{
+                                    position: absolute;
+                                    top: 1542px;
+                                    left: 100px;
+                                    font-size: 18px;
+                                    opacity: 0.4;
+                                }
+                                .uvIndex3{
+                                    position: absolute;
+                                    top: 1542px;
+                                    left: 294px;
+                                    font-size: 18px;
+                                    opacity: 0.4;
+                                }
+                                .uvIndex4{
+                                    position: absolute;
+                                    top: 1632px;
+                                    left: 328px;
+                                    font-size: 18px;
+                                    opacity: 0.4;
+                                }
+                                .wind__imgWrapper {
+                                    width: 32px;
+                                    height: 32px;
+                                    transform: rotate(0deg);
+                                    transition: 1s all ease-in;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: contain;
+                                    }
+                                }
                                 
     
-        //                         .uvIndex__graphWrapper{
-        //                             width: 80%;
-        //                             height: 120px;
-        //                             overflow: hidden;
-        //                             display: flex;
-        //                             justify-content: center;
-        //                             .uvIndex__graph{
-        //                                 width: 264px;
-        //                                 height: 264px;
-        //                                 position: relative;
-        //                                 top: -0px;
-        //                                 transform: scale(1, -1);
-        //                                 .uvIndex__mainNum{
-        //                                     background-color: rgb(255, 255, 255);
-        //                                     width: 140px;
-        //                                     height: 140px;
-        //                                     position: relative;
-        //                                     z-index: 2;
-        //                                     top: -206px;
-        //                                     left: 62px;
-        //                                     border-radius: 50%;
-        //                                     display: flex;
-        //                                     justify-content: center;
-        //                                     align-items: center;
-        //                                     transform: scale(1, -1);
-        //                                         span{
-        //                                         margin: 0px;
-        //                                         top: -18px;
-        //                                         position: relative;
-        //                                         font-size: 42px;
-        //                                     }
-        //                                 }
-        //                                 .uvIndex__shadowLine{
-        //                                     background-color: rgb(255, 255, 255,0);
-        //                                     width: 168px;
-        //                                     height: 168px;
-        //                                     position: absolute;
-        //                                     z-index: 2;
-        //                                     border: 22px solid #dedede;
-        //                                     border-radius: 50%;
-        //                                     top: 40px;
-        //                                     left: 26px;
-        //                                     z-index: -1;
-        //                                 }
-        //                             }
-        //                         }
+                                .uvIndex__graphWrapper{
+                                    width: 80%;
+                                    height: 120px;
+                                    overflow: hidden;
+                                    display: flex;
+                                    justify-content: center;
+                                    .uvIndex__graph{
+                                        width: 264px;
+                                        height: 264px;
+                                        position: relative;
+                                        top: -0px;
+                                        transform: scale(1, -1);
+                                        .uvIndex__mainNum{
+                                            background-color: rgb(255, 255, 255);
+                                            width: 140px;
+                                            height: 140px;
+                                            position: relative;
+                                            z-index: 2;
+                                            top: -206px;
+                                            left: 62px;
+                                            border-radius: 50%;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            transform: scale(1, -1);
+                                                span{
+                                                margin: 0px;
+                                                top: -18px;
+                                                position: relative;
+                                                font-size: 42px;
+                                            }
+                                        }
+                                        .uvIndex__shadowLine{
+                                            background-color: rgb(255, 255, 255,0);
+                                            width: 168px;
+                                            height: 168px;
+                                            position: absolute;
+                                            z-index: 2;
+                                            border: 22px solid #dedede;
+                                            border-radius: 50%;
+                                            top: 40px;
+                                            left: 26px;
+                                            z-index: -1;
+                                        }
+                                    }
+                                }
                                 
-        //                     }
+                            }
     
-        //                     .module__humidity {
-        //                         padding-left: 2.5rem;
-        //                         display: flex;
-        //                         align-items: center;
-        //                         margin-top: 1rem;
+                            .module__humidity {
+                                padding-left: 2.5rem;
+                                display: flex;
+                                align-items: center;
+                                margin-top: 1rem;
     
-        //                         .humidty_value{
-        //                             width: 100%;
-        //                             height: 106px;
-        //                             display: flex;
-        //                             align-items: baseline;
-        //                             h1 {
-        //                                 font-size: 64px;
-        //                                 font-weight: 400;
-        //                                 margin: 0px;
-        //                                 span {
-        //                                     font-size: 32px;
-        //                                     font-weight: 400;
-        //                                     position: relative;
-        //                                     top: -24px;
-        //                                     left: -8px;
-        //                                 }
-        //                             }
-        //                             #pres{
-        //                                 margin-left: 0%;
-        //                                     font-size: 54px;
-        //                             }
-        //                             .humidty__bar{
-        //                                 background-color: #dedede;
-        //                                 width: 32px;
-        //                                 height: 100px;
-        //                                 position: relative;
-        //                                 top: 6px;
-        //                                 margin-left: 8%;
-        //                                 #pres__bar{
-        //                                     background-color: #ffb13b;
-        //                                 }
-        //                                 .bar__wrapper{
-        //                                     width: 100%;
-        //                                     height: 100%;
-        //                                     position: relative;
-        //                                     background-color: #4050d2;
-        //                                     div{
-        //                                         width: 100%;
-        //                                         height: 100%;
-        //                                         position: relative;
-        //                                         background-color: #dedede;
-        //                                         transition: 0.5s all ease-out;
-        //                                     }
-        //                                 }
+                                .humidty_value{
+                                    width: 100%;
+                                    height: 106px;
+                                    display: flex;
+                                    align-items: baseline;
+                                    h1 {
+                                        font-size: 64px;
+                                        font-weight: 400;
+                                        margin: 0px;
+                                        span {
+                                            font-size: 32px;
+                                            font-weight: 400;
+                                            position: relative;
+                                            top: -24px;
+                                            left: -8px;
+                                        }
+                                    }
+                                    #pres{
+                                        margin-left: 0%;
+                                            font-size: 54px;
+                                    }
+                                    .humidty__bar{
+                                        background-color: #dedede;
+                                        width: 32px;
+                                        height: 100px;
+                                        position: relative;
+                                        top: 6px;
+                                        margin-left: 8%;
+                                        #pres__bar{
+                                            background-color: #ffb13b;
+                                        }
+                                        .bar__wrapper{
+                                            width: 100%;
+                                            height: 100%;
+                                            position: relative;
+                                            background-color: #4050d2;
+                                            div{
+                                                width: 100%;
+                                                height: 100%;
+                                                position: relative;
+                                                background-color: #dedede;
+                                                transition: 0.5s all ease-out;
+                                            }
+                                        }
                                         
-        //                             }
-        //                             .humidity__legend{
-        //                                 height: 100%;
-        //                                 width: 36%;
-        //                                 margin-left: 4%;
-        //                                 position: relative;
-        //                                 top: -84px;
-        //                                 p{
-        //                                     margin: 0% 0% 8% 0%;
-        //                                     font-weight: 500;
-        //                                     opacity: 0.5;
-        //                                     font-size: 14px;
-        //                                     span{
-        //                                         margin-right: 8%;
-        //                                     }
-        //                                 }
-        //                             }
-        //                         }
+                                    }
+                                    .humidity__legend{
+                                        height: 100%;
+                                        width: 36%;
+                                        margin-left: 4%;
+                                        position: relative;
+                                        top: -84px;
+                                        p{
+                                            margin: 0% 0% 8% 0%;
+                                            font-weight: 500;
+                                            opacity: 0.5;
+                                            font-size: 14px;
+                                            span{
+                                                margin-right: 8%;
+                                            }
+                                        }
+                                    }
+                                }
     
-        //                     }
-        //                     .module__pres {
-        //                         padding-left: 2.5rem;
-        //                         display: flex;
-        //                         align-items: center;
-        //                         margin-top: 1rem;
+                            }
+                            .module__pres {
+                                padding-left: 2.5rem;
+                                display: flex;
+                                align-items: center;
+                                margin-top: 1rem;
     
-        //                         .pres_value{
-        //                             width: 100%;
-        //                             height: 106px;
-        //                             display: flex;
-        //                             align-items: baseline;
-        //                             h1 {
-        //                                 width: 150px;
-        //                                 font-size: 54px;
-        //                                 font-weight: 400;
-        //                                 margin: 0px;
-        //                                 span {
-        //                                     font-size: 32px;
-        //                                     font-weight: 400;
-        //                                     position: relative;
-        //                                     margin-left: 6px;
-        //                                 }
-        //                             }
+                                .pres_value{
+                                    width: 100%;
+                                    height: 106px;
+                                    display: flex;
+                                    align-items: baseline;
+                                    h1 {
+                                        width: 150px;
+                                        font-size: 54px;
+                                        font-weight: 400;
+                                        margin: 0px;
+                                        span {
+                                            font-size: 32px;
+                                            font-weight: 400;
+                                            position: relative;
+                                            margin-left: 6px;
+                                        }
+                                    }
                                    
-        //                             .pres__bar{
-        //                                 background-color: #dedede;
-        //                                 width: 32px;
-        //                                 height: 100px;
-        //                                 position: relative;
-        //                                 top: 6px;
-        //                                 left: 8%;
-        //                                 .bar__wrapper{
-        //                                     width: 100%;
-        //                                     height: 100%;
-        //                                     position: relative;
-        //                                     background-color: #ffb13b;
-        //                                     div{
-        //                                         width: 100%;
-        //                                         height: 100%;
-        //                                         position: relative;
-        //                                         background-color: #dedede;
-        //                                         transition: 0.5s all ease-out;
-        //                                     }
-        //                                 }
+                                    .pres__bar{
+                                        background-color: #dedede;
+                                        width: 32px;
+                                        height: 100px;
+                                        position: relative;
+                                        top: 6px;
+                                        left: 8%;
+                                        .bar__wrapper{
+                                            width: 100%;
+                                            height: 100%;
+                                            position: relative;
+                                            background-color: #ffb13b;
+                                            div{
+                                                width: 100%;
+                                                height: 100%;
+                                                position: relative;
+                                                background-color: #dedede;
+                                                transition: 0.5s all ease-out;
+                                            }
+                                        }
                                         
-        //                             }
-        //                             .pres__legend{
-        //                                 height: 100%;
-        //                                 width: 36%;
-        //                                 margin-left: 4%;
-        //                                 position: relative;
-        //                                 top: -84px;
-        //                                 left: 10%;
-        //                                 p{
-        //                                     margin: 0% 0% 8% 0%;
-        //                                     font-weight: 500;
-        //                                     opacity: 0.5;
-        //                                     font-size: 14px;
-        //                                     span{
-        //                                         margin-right: 8%;
-        //                                     }
-        //                                 }
-        //                             }
-        //                         }
+                                    }
+                                    .pres__legend{
+                                        height: 100%;
+                                        width: 36%;
+                                        margin-left: 4%;
+                                        position: relative;
+                                        top: -84px;
+                                        left: 10%;
+                                        p{
+                                            margin: 0% 0% 8% 0%;
+                                            font-weight: 500;
+                                            opacity: 0.5;
+                                            font-size: 14px;
+                                            span{
+                                                margin-right: 8%;
+                                            }
+                                        }
+                                    }
+                                }
     
-        //                     }
+                            }
     
     
-        //                     .module__visibility {
-        //                         padding-left: 2.5rem;
-        //                         display: flex;
-        //                         align-items: baseline;
-        //                         margin-top: 3rem;
+                            .module__visibility {
+                                padding-left: 2.5rem;
+                                display: flex;
+                                align-items: baseline;
+                                margin-top: 3rem;
     
-        //                         .visibility__value{
-        //                             width: 100%;
-        //                             display: flex;
-        //                             align-items: baseline;
-        //                             h1 {
-        //                                 font-size: 64px;
-        //                                 font-weight: 400;
-        //                                 margin: 0px;
-        //                                 span {
-        //                                     font-size: 32px;
-        //                                     font-weight: 400;
-        //                                 }
-        //                             }
-        //                             .humidty__bar{
-        //                                 background-color: #dedede;
-        //                                 width: 32px;
-        //                                 height: 100px;
-        //                                 position: relative;
-        //                                 top: 6px;
-        //                                 margin-left: 8%;
-        //                                 .bar__wrapper{
-        //                                     width: 100%;
-        //                                         height: 100%;
-        //                                         position: relative;
-        //                                         background-color: #4050d2;
-        //                                     div{
-        //                                         width: 100%;
-        //                                         height: 100%;
-        //                                         position: relative;
-        //                                         background-color: #dedede;
-        //                                         transition: 0.5s all ease-out;
-        //                                     }
-        //                                 }
+                                .visibility__value{
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: baseline;
+                                    h1 {
+                                        font-size: 48px;
+                                        font-weight: 400;
+                                        margin: 0px;
+                                        span {
+                                            font-size: 32px;
+                                            font-weight: 400;
+                                        }
+                                    }
+                                    .humidty__bar{
+                                        background-color: #dedede;
+                                        width: 32px;
+                                        height: 100px;
+                                        position: relative;
+                                        top: 6px;
+                                        margin-left: 8%;
+                                        .bar__wrapper{
+                                            width: 100%;
+                                                height: 100%;
+                                                position: relative;
+                                                background-color: #4050d2;
+                                            div{
+                                                width: 100%;
+                                                height: 100%;
+                                                position: relative;
+                                                background-color: #dedede;
+                                                transition: 0.5s all ease-out;
+                                            }
+                                        }
                                         
-        //                             }
-        //                             .humidity__legend{
-        //                                 height: 100%;
-        //                                 width: 36%;
-        //                                 margin-left: 4%;
-        //                                 position: relative;
-        //                                 top: -84px;
-        //                                 p{
-        //                                     margin: 0% 0% 8% 0%;
-        //                                     font-weight: 500;
-        //                                     opacity: 0.5;
-        //                                     font-size: 14px;
-        //                                     span{
-        //                                         margin-right: 8%;
-        //                                     }
-        //                                 }
-        //                             }
-        //                         }
+                                    }
+                                    .humidity__legend{
+                                        height: 100%;
+                                        width: 36%;
+                                        margin-left: 4%;
+                                        position: relative;
+                                        top: -84px;
+                                        p{
+                                            margin: 0% 0% 8% 0%;
+                                            font-weight: 500;
+                                            opacity: 0.5;
+                                            font-size: 14px;
+                                            span{
+                                                margin-right: 8%;
+                                            }
+                                        }
+                                    }
+                                }
     
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
+                            }
+                        }
+                    }
+                }
+            }
     
-        // }
+        }
     
     }
 }

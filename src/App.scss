@@ -1,6 +1,7 @@
-#night__mode{
+#night__mode {
     background-color: #272727;
 }
+
 .container {
     width: 100%;
     background-color: #f0f0f3;
@@ -153,99 +154,23 @@
 
     .rightSection {
         width: 100%;
-        padding: 2rem;
+        padding: 1.5rem;
         padding-left: 4rem;
         padding-right: 4rem;
 
         .rightSection__wrapper {
             width: 100%;
             height: 100%;
-
-            .wellcome {
-                font-size: 22px;
-                display: flex;
-                width: 100%;
-                align-items: center;
-
-                h1 {
-                    display: inline;
-                    margin: 0px;
-
-                    span {
-                        font-size: 32px;
-                        font-weight: 400;
-                    }
-                }
-
-                select {
-                    display: inline-block;
-                    width: 220px;
-                    border: none;
-                    height: 40px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    margin-left: 1rem;
-                    margin-top: 18px;
-                    background-color: #fff;
-                    border-radius: 6px;
-                    outline: none;
-
-                    option {
-                        border: none;
-                        font-size: 16px;
-                    }
-                }
+            #weekForecast__mobile{
+                display: none;
             }
-
             .weekForecast {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 margin-top: 2rem;
-                .week__scroll{
-                    width: 100%;
-                    height: 240px;
-                    display: flex;
-                    justify-content: space-between;
-                }
-                .weekForecast__day {
-                    width: 13%;
-                    height: 200px;
-                    background-color: #ffffff;
-                    border-radius: 12px;
-                    text-align: center;
-                    cursor: pointer;
-                    transition: 0.5s ease-out;
 
-                    &:hover {
-                        transform: scale(1.1);
-                    }
-
-                    .weekForecast__imgWrapper {
-                        width: 100%;
-                        height: 64px;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: contain;
-                        }
-                    }
-
-                    h3 {
-                        font-weight: 500;
-                        font-size: 20px;
-                    }
-
-                    p {
-                        font-weight: 500;
-                        font-size: 20px;
-
-                        span {
-                            opacity: 0.4;
-                        }
-                    }
-                }
+                
             }
 
             .addInfo {
@@ -294,7 +219,7 @@
                                 margin-left: 2rem;
 
                                 p {
-                                    font-size:22px;
+                                    font-size: 22px;
                                     font-weight: 500;
                                     margin: 0px;
                                 }
@@ -355,6 +280,7 @@
                                 border: 3px solid #dbdbdb;
                                 padding: 2%;
                                 border-radius: 50%;
+
                                 img {
                                     width: 80%;
                                     height: 80%;
@@ -362,6 +288,7 @@
                                 }
                             }
                         }
+
                         .module__uvIndex {
                             display: flex;
                             align-items: center;
@@ -371,62 +298,70 @@
                             span {
                                 font-size: 16px;
                                 font-weight: 500;
-                                
+
                             }
-                            .uvIndex1{
+
+                            .uvIndex1 {
                                 position: absolute;
-                                top: 572px;
+                                top: 608px;
                                 left: 527px;
                                 font-size: 18px;
                                 opacity: 0.4;
                             }
-                            .uvIndex2{
+
+                            .uvIndex2 {
                                 position: absolute;
-                                top: 462px;
+                                top: 508px;
                                 left: 596px;
                                 font-size: 18px;
                                 opacity: 0.4;
                             }
-                            .uvIndex3{
+
+                            .uvIndex3 {
                                 position: absolute;
-                                top: 462px;
+                                top: 508px;
                                 left: 743px;
                                 font-size: 18px;
                                 opacity: 0.4;
                             }
-                            .uvIndex4{
+
+                            .uvIndex4 {
                                 position: absolute;
-                                top: 572px;
+                                top: 608px;
                                 left: 800px;
                                 font-size: 18px;
                                 opacity: 0.4;
                             }
+
                             .wind__imgWrapper {
                                 width: 32px;
                                 height: 32px;
                                 transform: rotate(0deg);
                                 transition: 1s all ease-in;
+
                                 img {
                                     width: 100%;
                                     height: 100%;
                                     object-fit: contain;
                                 }
                             }
-                            
 
-                            .uvIndex__graphWrapper{
+
+                            .uvIndex__graphWrapper {
                                 width: 80%;
                                 height: 120px;
                                 overflow: hidden;
                                 display: flex;
                                 justify-content: center;
-                                .uvIndex__graph{
+
+                                .uvIndex__graph {
                                     width: 264px;
                                     height: 264px;
                                     position: relative;
                                     top: -0px;
                                     transform: scale(1, -1);
-                                    .uvIndex__mainNum{
+
+                                    .uvIndex__mainNum {
                                         background-color: rgb(255, 255, 255);
                                         width: 140px;
                                         height: 140px;
@@ -439,15 +374,17 @@
                                         justify-content: center;
                                         align-items: center;
                                         transform: scale(1, -1);
-                                            span{
+
+                                        span {
                                             margin: 0px;
                                             top: -18px;
                                             position: relative;
                                             font-size: 42px;
                                         }
                                     }
-                                    .uvIndex__shadowLine{
-                                        background-color: rgb(255, 255, 255,0);
+
+                                    .uvIndex__shadowLine {
+                                        background-color: rgb(255, 255, 255, 0);
                                         width: 168px;
                                         height: 168px;
                                         position: absolute;
@@ -460,7 +397,7 @@
                                     }
                                 }
                             }
-                            
+
                         }
 
                         .module__humidity {
@@ -469,15 +406,17 @@
                             align-items: center;
                             margin-top: 1rem;
 
-                            .humidty_value{
+                            .humidty_value {
                                 width: 100%;
                                 height: 106px;
                                 display: flex;
                                 align-items: baseline;
+
                                 h1 {
                                     font-size: 64px;
                                     font-weight: 400;
                                     margin: 0px;
+
                                     span {
                                         font-size: 32px;
                                         font-weight: 400;
@@ -486,26 +425,31 @@
                                         left: -8px;
                                     }
                                 }
-                                #pres{
+
+                                #pres {
                                     margin-left: 0%;
-                                        font-size: 54px;
+                                    font-size: 54px;
                                 }
-                                .humidty__bar{
+
+                                .humidty__bar {
                                     background-color: #dedede;
                                     width: 32px;
                                     height: 100px;
                                     position: relative;
                                     top: 6px;
                                     margin-left: 8%;
-                                    #pres__bar{
+
+                                    #pres__bar {
                                         background-color: #ffb13b;
                                     }
-                                    .bar__wrapper{
+
+                                    .bar__wrapper {
                                         width: 100%;
                                         height: 100%;
                                         position: relative;
                                         background-color: #4050d2;
-                                        div{
+
+                                        div {
                                             width: 100%;
                                             height: 100%;
                                             position: relative;
@@ -513,20 +457,23 @@
                                             transition: 0.5s all ease-out;
                                         }
                                     }
-                                    
+
                                 }
-                                .humidity__legend{
+
+                                .humidity__legend {
                                     height: 100%;
                                     width: 36%;
                                     margin-left: 4%;
                                     position: relative;
                                     top: -84px;
-                                    p{
+
+                                    p {
                                         margin: 0% 0% 8% 0%;
                                         font-weight: 500;
                                         opacity: 0.5;
                                         font-size: 14px;
-                                        span{
+
+                                        span {
                                             margin-right: 8%;
                                         }
                                     }
@@ -534,22 +481,25 @@
                             }
 
                         }
+
                         .module__pres {
                             padding-left: 2.5rem;
                             display: flex;
                             align-items: center;
                             margin-top: 1rem;
 
-                            .pres_value{
+                            .pres_value {
                                 width: 100%;
                                 height: 106px;
                                 display: flex;
                                 align-items: baseline;
+
                                 h1 {
                                     width: 150px;
                                     font-size: 54px;
                                     font-weight: 400;
                                     margin: 0px;
+
                                     span {
                                         font-size: 32px;
                                         font-weight: 400;
@@ -557,20 +507,22 @@
                                         margin-left: 6px;
                                     }
                                 }
-                               
-                                .pres__bar{
+
+                                .pres__bar {
                                     background-color: #dedede;
                                     width: 32px;
                                     height: 100px;
                                     position: relative;
                                     top: 6px;
                                     left: 8%;
-                                    .bar__wrapper{
+
+                                    .bar__wrapper {
                                         width: 100%;
                                         height: 100%;
                                         position: relative;
                                         background-color: #ffb13b;
-                                        div{
+
+                                        div {
                                             width: 100%;
                                             height: 100%;
                                             position: relative;
@@ -578,21 +530,24 @@
                                             transition: 0.5s all ease-out;
                                         }
                                     }
-                                    
+
                                 }
-                                .pres__legend{
+
+                                .pres__legend {
                                     height: 100%;
                                     width: 36%;
                                     margin-left: 4%;
                                     position: relative;
                                     top: -84px;
                                     left: 10%;
-                                    p{
+
+                                    p {
                                         margin: 0% 0% 8% 0%;
                                         font-weight: 500;
                                         opacity: 0.5;
                                         font-size: 14px;
-                                        span{
+
+                                        span {
                                             margin-right: 8%;
                                         }
                                     }
@@ -608,32 +563,37 @@
                             align-items: baseline;
                             margin-top: 3rem;
 
-                            .visibility__value{
+                            .visibility__value {
                                 width: 100%;
                                 display: flex;
                                 align-items: baseline;
+
                                 h1 {
                                     font-size: 64px;
                                     font-weight: 400;
                                     margin: 0px;
+
                                     span {
                                         font-size: 32px;
                                         font-weight: 400;
                                     }
                                 }
-                                .humidty__bar{
+
+                                .humidty__bar {
                                     background-color: #dedede;
                                     width: 32px;
                                     height: 100px;
                                     position: relative;
                                     top: 6px;
                                     margin-left: 8%;
-                                    .bar__wrapper{
+
+                                    .bar__wrapper {
                                         width: 100%;
-                                            height: 100%;
-                                            position: relative;
-                                            background-color: #4050d2;
-                                        div{
+                                        height: 100%;
+                                        position: relative;
+                                        background-color: #4050d2;
+
+                                        div {
                                             width: 100%;
                                             height: 100%;
                                             position: relative;
@@ -641,20 +601,23 @@
                                             transition: 0.5s all ease-out;
                                         }
                                     }
-                                    
+
                                 }
-                                .humidity__legend{
+
+                                .humidity__legend {
                                     height: 100%;
                                     width: 36%;
                                     margin-left: 4%;
                                     position: relative;
                                     top: -84px;
-                                    p{
+
+                                    p {
                                         margin: 0% 0% 8% 0%;
                                         font-weight: 500;
                                         opacity: 0.5;
                                         font-size: 14px;
-                                        span{
+
+                                        span {
                                             margin-right: 8%;
                                         }
                                     }
@@ -685,7 +648,7 @@
     }
 }
 
-@media screen and (max-width:430px){
+@media screen and (max-width:430px) {
     .container {
         width: 100%;
         height: 100%;
@@ -695,11 +658,13 @@
         position: relative;
         flex-direction: column;
         overflow: hidden;
+
         .left-side__menu {
-            width: 80%;
+            width: 85%;
             height: 100%;
             background-color: white;
-            padding: 2rem 3rem 2rem 3rem;
+            padding: 2rem;
+            margin-right: 2rem;
             // position: relative;
             // float: left;
             // transition: all 1s ease-out;
@@ -707,12 +672,12 @@
             //     width: 30%;
             // }
         }
-    
+
         .current-weather {
             width: 100%;
             // height: 480px;
             margin-top: 3rem;
-    
+
             hr {
                 border: none;
                 background-color: #dbdbdb;
@@ -721,7 +686,7 @@
                 border-top: 0.5px solid #ffffff;
                 margin-top: 12%;
             }
-    
+
             .current-weather__visual {
                 // background: url(../public/img/sunny.png) no-repeat;
                 // background-position: left;
@@ -731,19 +696,19 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-    
+
                 img {
                     width: 90%;
                     height: 90%;
                     object-fit: contain;
                 }
             }
-    
+
             .current-weather__temp {
                 p {
                     margin: 4% 0 0 0;
                     font-size: 78px;
-    
+
                     span {
                         font-size: 48px;
                         position: relative;
@@ -751,38 +716,38 @@
                     }
                 }
             }
-    
+
             .current-weather__date {
                 p {
                     font-size: 18px;
                     font-weight: 500;
-    
+
                     span {
                         opacity: 0.5;
                     }
                 }
             }
-    
+
             .current-weather__param {
                 margin-top: 8%;
                 width: 100%;
-    
+
                 .param__wwcode {
                     display: flex;
                     width: 100%;
                     align-items: center;
                     margin-top: 2rem;
-    
+
                     span {
                         font-size: 16px;
                         margin-left: 0.6rem;
                     }
-    
+
                     .param__icon-wrapper {
                         display: inline-block;
                         width: 16px;
                         height: 16px;
-    
+
                         img {
                             width: 100%;
                             height: 100%;
@@ -790,23 +755,23 @@
                         }
                     }
                 }
-    
+
                 .param__rain {
                     display: flex;
                     width: 100%;
                     align-items: center;
                     margin-top: 1rem;
-    
+
                     span {
                         font-size: 16px;
                         margin-left: 0.6rem;
                     }
-    
+
                     .param__icon-wrapper {
                         display: inline-block;
                         width: 16px;
                         height: 16px;
-    
+
                         img {
                             width: 100%;
                             height: 100%;
@@ -816,7 +781,7 @@
                 }
             }
         }
-    
+
         .choosen-city {
             width: 100%;
             height: 186px;
@@ -824,8 +789,11 @@
             overflow: hidden;
             text-align: center;
             margin-top: 3rem;
+            .ymaps-2-1-79-map{
+                width: 340px;
+            }
         }
-    
+
         .choosen-city__load {
             width: 100%;
             height: 186px;
@@ -838,17 +806,19 @@
             transition: all 1s ease-out;
             animation: blinking 2s linear infinite;
         }
-    
+
         .rightSection {
             width: 100%;
             padding: 2rem;
-            padding-left: 2rem;
-            padding-right: 2rem;
-    
             .rightSection__wrapper {
                 width: 100%;
                 height: 100%;
-                
+                #weekForecast__mobile{
+                    display: block;
+                }
+                #weekForecast__pc{
+                    display: none;
+                }
                 .wellcome {
                     font-size: 22px;
                     display: flex;
@@ -856,15 +826,17 @@
                     width: 80%;
                     align-items: center;
                     margin-right: 0px;
+
                     h1 {
                         margin: 0px;
                         font-size: 32px;
+
                         span {
                             font-size: 28px;
                             font-weight: 500;
                         }
                     }
-    
+
                     select {
                         display: block;
                         width: 220px;
@@ -877,25 +849,20 @@
                         background-color: #fff;
                         border-radius: 6px;
                         outline: none;
-    
+
                         option {
                             border: none;
                             font-size: 16px;
                         }
                     }
                 }
-    
+                
                 .weekForecast {
                     width: 364px;
+                    height: 240px;
                     display: flex;
-                    margin-top: 2rem;
+                    margin-top: 1rem;
                     overflow: hidden;
-                    
-                    .week__scroll{
-                        width: 100%;
-                        height: 240px;
-
-                    }
                     .weekForecast__day {
                         width: 100%;
                         height: 240px;
@@ -906,168 +873,187 @@
                         transition: 0.5s ease-out;
                         margin-right: 2rem;
                         display: inline-block;
+
                         &:hover {
                             transform: scale(1.1);
                         }
-    
+
                         .weekForecast__imgWrapper {
                             width: 100%;
-                            height: 94px;
-    
+                            height: 84px;
+
                             img {
                                 width: 100%;
                                 height: 100%;
                                 object-fit: contain;
                             }
                         }
-    
+
                         h3 {
                             font-weight: 500;
                             font-size: 20px;
                         }
-    
+
                         p {
                             font-weight: 500;
                             font-size: 20px;
-    
+
                             span {
                                 opacity: 0.4;
                             }
                         }
                     }
                 }
-    
+
                 .addInfo {
                     width: 100%;
                     margin-top: 1rem;
-    
+
                     .addInfo__firstRow {
                         display: block;
                         justify-content: space-between;
                         margin-top: 2rem;
-                        .mobile__addInfo__uv{
+
+                        .mobile__addInfo__uv {
                             width: 88%;
                             margin-bottom: 2rem;
                         }
-                        .mobile__addInfo__wind{
+
+                        .mobile__addInfo__wind {
                             width: 88%;
                             margin-bottom: 2rem;
                         }
-                        .mobile__addInfo__sunrise{
+
+                        .mobile__addInfo__sunrise {
                             width: 88%;
                         }
-                        #mobile__addInfo__humidity{
+
+                        #mobile__addInfo__humidity {
                             width: 52%;
-                            h4{
+
+                            h4 {
                                 margin-left: 2rem;
                             }
-                            .module__humidity{
+
+                            .module__humidity {
                                 padding-left: 2rem;
-                                .humidty_value{
-                                    h1{
+
+                                .humidty_value {
+                                    h1 {
                                         font-size: 64px;
                                         display: inline-block;
-                                        span{
+
+                                        span {
                                             font-size: 26px;
                                             top: -29px;
                                         }
                                     }
-                                    .humidity__legend{
+
+                                    .humidity__legend {
                                         display: none;
                                     }
                                 }
                             }
                         }
-                        #mobile__addInfo__visibility{
+
+                        #mobile__addInfo__visibility {
                             width: 32%;
                             margin-left: 1rem;
                             text-align: center;
-                            .module__visibility{
+
+                            .module__visibility {
                                 padding-left: 12px;
                                 margin-top: 5rem;
                                 text-align: center;
                             }
-                            h4{
+
+                            h4 {
                                 margin-left: 0px;
                             }
-                            h1{
+
+                            h1 {
                                 font-size: 42px;
                                 margin: 0px;
-                                span{
+
+                                span {
                                     font-size: 16px;
                                 }
                             }
                         }
-                        .mobile__addInfo__pres{
+
+                        .mobile__addInfo__pres {
                             width: 88%;
                             margin-top: 2rem;
                         }
+
                         .addInfo__module {
                             height: 240px;
                             background-color: #fff;
                             border-radius: 16px;
                             display: inline-block;
+
                             h4 {
                                 font-size: 18px;
                                 font-weight: 500;
                                 margin-left: 2.5rem;
                                 opacity: 0.5;
                             }
-    
+
                             .module__sunrise {
                                 padding-left: 2.5rem;
                                 display: flex;
                                 align-items: center;
                                 margin-top: 1rem;
-    
+
                                 .sunrise__imgWrapper {
                                     width: 64px;
                                     height: 64px;
-    
+
                                     img {
                                         width: 100%;
                                         height: 100%;
                                         object-fit: contain;
                                     }
                                 }
-    
+
                                 .sunrise__time {
                                     display: flex;
                                     flex-direction: column;
                                     justify-content: center;
                                     margin-left: 2rem;
-    
+
                                     p {
-                                        font-size:22px;
+                                        font-size: 22px;
                                         font-weight: 500;
                                         margin: 0px;
                                     }
                                 }
-    
+
                             }
-                            
-                            
+
+
                             .module__wind {
                                 display: flex;
                                 align-items: center;
                                 padding-left: 2.5rem;
                                 margin-bottom: 1rem;
+
                                 h1 {
                                     font-size: 64px;
                                     font-weight: 400;
                                     margin: 0px;
-    
+
                                     span {
                                         font-size: 32px;
                                         font-weight: 400;
                                         margin-left: 1rem;
                                     }
                                 }
-    
+
                                 .wind__imgWrapper {
                                     width: 32px;
                                     height: 32px;
-    
+
                                     img {
                                         width: 100%;
                                         height: 100%;
@@ -1075,19 +1061,19 @@
                                     }
                                 }
                             }
-    
+
                             .module__windDir {
                                 display: flex;
                                 align-items: center;
                                 padding-left: 2.5rem;
                                 margin-bottom: 1rem;
-    
+
                                 span {
                                     font-size: 16px;
                                     font-weight: 500;
                                     margin-left: 1rem;
                                 }
-    
+
                                 .wind__imgWrapper {
                                     width: 32px;
                                     height: 32px;
@@ -1099,6 +1085,7 @@
                                     border: 3px solid #dbdbdb;
                                     padding: 2%;
                                     border-radius: 50%;
+
                                     img {
                                         width: 80%;
                                         height: 80%;
@@ -1106,71 +1093,80 @@
                                     }
                                 }
                             }
+
                             .module__uvIndex {
                                 display: flex;
                                 align-items: center;
                                 padding-left: 2.5rem;
                                 margin-bottom: 1.5rem;
-    
+
                                 span {
                                     font-size: 16px;
                                     font-weight: 500;
-                                    
+
                                 }
-                                .uvIndex1{
+
+                                .uvIndex1 {
                                     position: absolute;
                                     top: 1632px;
                                     left: 68px;
                                     font-size: 18px;
                                     opacity: 0.4;
                                 }
-                                .uvIndex2{
+
+                                .uvIndex2 {
                                     position: absolute;
                                     top: 1542px;
                                     left: 100px;
                                     font-size: 18px;
                                     opacity: 0.4;
                                 }
-                                .uvIndex3{
+
+                                .uvIndex3 {
                                     position: absolute;
                                     top: 1542px;
                                     left: 294px;
                                     font-size: 18px;
                                     opacity: 0.4;
                                 }
-                                .uvIndex4{
+
+                                .uvIndex4 {
                                     position: absolute;
                                     top: 1632px;
                                     left: 328px;
                                     font-size: 18px;
                                     opacity: 0.4;
                                 }
+
                                 .wind__imgWrapper {
                                     width: 32px;
                                     height: 32px;
                                     transform: rotate(0deg);
                                     transition: 1s all ease-in;
+
                                     img {
                                         width: 100%;
                                         height: 100%;
                                         object-fit: contain;
                                     }
                                 }
-                                
-    
-                                .uvIndex__graphWrapper{
+
+
+                                .uvIndex__graphWrapper {
                                     width: 80%;
                                     height: 120px;
                                     overflow: hidden;
                                     display: flex;
                                     justify-content: center;
-                                    .uvIndex__graph{
+
+                                    .uvIndex__graph {
                                         width: 264px;
                                         height: 264px;
                                         position: relative;
                                         top: -0px;
                                         transform: scale(1, -1);
-                                        .uvIndex__mainNum{
+
+                                        .uvIndex__mainNum {
                                             background-color: rgb(255, 255, 255);
                                             width: 140px;
                                             height: 140px;
@@ -1183,15 +1179,17 @@
                                             justify-content: center;
                                             align-items: center;
                                             transform: scale(1, -1);
-                                                span{
+
+                                            span {
                                                 margin: 0px;
                                                 top: -18px;
                                                 position: relative;
                                                 font-size: 42px;
                                             }
                                         }
-                                        .uvIndex__shadowLine{
-                                            background-color: rgb(255, 255, 255,0);
+
+                                        .uvIndex__shadowLine {
+                                            background-color: rgb(255, 255, 255, 0);
                                             width: 168px;
                                             height: 168px;
                                             position: absolute;
@@ -1204,24 +1202,26 @@
                                         }
                                     }
                                 }
-                                
+
                             }
-    
+
                             .module__humidity {
                                 padding-left: 2.5rem;
                                 display: flex;
                                 align-items: center;
                                 margin-top: 1rem;
-    
-                                .humidty_value{
+
+                                .humidty_value {
                                     width: 100%;
                                     height: 106px;
                                     display: flex;
                                     align-items: baseline;
+
                                     h1 {
                                         font-size: 64px;
                                         font-weight: 400;
                                         margin: 0px;
+
                                         span {
                                             font-size: 32px;
                                             font-weight: 400;
@@ -1230,26 +1230,31 @@
                                             left: -8px;
                                         }
                                     }
-                                    #pres{
+
+                                    #pres {
                                         margin-left: 0%;
-                                            font-size: 54px;
+                                        font-size: 54px;
                                     }
-                                    .humidty__bar{
+
+                                    .humidty__bar {
                                         background-color: #dedede;
                                         width: 32px;
                                         height: 100px;
                                         position: relative;
                                         top: 6px;
                                         margin-left: 8%;
-                                        #pres__bar{
+
+                                        #pres__bar {
                                             background-color: #ffb13b;
                                         }
-                                        .bar__wrapper{
+
+                                        .bar__wrapper {
                                             width: 100%;
                                             height: 100%;
                                             position: relative;
                                             background-color: #4050d2;
-                                            div{
+
+                                            div {
                                                 width: 100%;
                                                 height: 100%;
                                                 position: relative;
@@ -1257,43 +1262,49 @@
                                                 transition: 0.5s all ease-out;
                                             }
                                         }
-                                        
+
                                     }
-                                    .humidity__legend{
+
+                                    .humidity__legend {
                                         height: 100%;
                                         width: 36%;
                                         margin-left: 4%;
                                         position: relative;
                                         top: -84px;
-                                        p{
+
+                                        p {
                                             margin: 0% 0% 8% 0%;
                                             font-weight: 500;
                                             opacity: 0.5;
                                             font-size: 14px;
-                                            span{
+
+                                            span {
                                                 margin-right: 8%;
                                             }
                                         }
                                     }
                                 }
-    
+
                             }
+
                             .module__pres {
                                 padding-left: 2.5rem;
                                 display: flex;
                                 align-items: center;
                                 margin-top: 1rem;
-    
-                                .pres_value{
+
+                                .pres_value {
                                     width: 100%;
                                     height: 106px;
                                     display: flex;
                                     align-items: baseline;
+
                                     h1 {
                                         width: 150px;
                                         font-size: 54px;
                                         font-weight: 400;
                                         margin: 0px;
+
                                         span {
                                             font-size: 32px;
                                             font-weight: 400;
@@ -1301,20 +1312,22 @@
                                             margin-left: 6px;
                                         }
                                     }
-                                   
-                                    .pres__bar{
+
+                                    .pres__bar {
                                         background-color: #dedede;
                                         width: 32px;
                                         height: 100px;
                                         position: relative;
                                         top: 6px;
                                         left: 8%;
-                                        .bar__wrapper{
+
+                                        .bar__wrapper {
                                             width: 100%;
                                             height: 100%;
                                             position: relative;
                                             background-color: #ffb13b;
-                                            div{
+
+                                            div {
                                                 width: 100%;
                                                 height: 100%;
                                                 position: relative;
@@ -1322,62 +1335,70 @@
                                                 transition: 0.5s all ease-out;
                                             }
                                         }
-                                        
+
                                     }
-                                    .pres__legend{
+
+                                    .pres__legend {
                                         height: 100%;
                                         width: 36%;
                                         margin-left: 4%;
                                         position: relative;
                                         top: -84px;
                                         left: 10%;
-                                        p{
+
+                                        p {
                                             margin: 0% 0% 8% 0%;
                                             font-weight: 500;
                                             opacity: 0.5;
                                             font-size: 14px;
-                                            span{
+
+                                            span {
                                                 margin-right: 8%;
                                             }
                                         }
                                     }
                                 }
-    
+
                             }
-    
-    
+
+
                             .module__visibility {
                                 padding-left: 2.5rem;
                                 display: flex;
                                 align-items: baseline;
                                 margin-top: 3rem;
-    
-                                .visibility__value{
+
+                                .visibility__value {
                                     width: 100%;
                                     display: flex;
                                     align-items: baseline;
+
                                     h1 {
                                         font-size: 48px;
                                         font-weight: 400;
                                         margin: 0px;
+
                                         span {
                                             font-size: 32px;
                                             font-weight: 400;
                                         }
                                     }
-                                    .humidty__bar{
+
+                                    .humidty__bar {
                                         background-color: #dedede;
                                         width: 32px;
                                         height: 100px;
                                         position: relative;
                                         top: 6px;
                                         margin-left: 8%;
-                                        .bar__wrapper{
+
+                                        .bar__wrapper {
                                             width: 100%;
-                                                height: 100%;
-                                                position: relative;
-                                                background-color: #4050d2;
-                                            div{
+                                            height: 100%;
+                                            position: relative;
+                                            background-color: #4050d2;
+
+                                            div {
                                                 width: 100%;
                                                 height: 100%;
                                                 position: relative;
@@ -1385,33 +1406,36 @@
                                                 transition: 0.5s all ease-out;
                                             }
                                         }
-                                        
+
                                     }
-                                    .humidity__legend{
+
+                                    .humidity__legend {
                                         height: 100%;
                                         width: 36%;
                                         margin-left: 4%;
                                         position: relative;
                                         top: -84px;
-                                        p{
+
+                                        p {
                                             margin: 0% 0% 8% 0%;
                                             font-weight: 500;
                                             opacity: 0.5;
                                             font-size: 14px;
-                                            span{
+
+                                            span {
                                                 margin-right: 8%;
                                             }
                                         }
                                     }
                                 }
-    
+
                             }
                         }
                     }
                 }
             }
-    
+
         }
-    
+
     }
 }

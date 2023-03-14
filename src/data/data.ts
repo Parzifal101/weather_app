@@ -70,3 +70,22 @@ export function visualiseWeather(wwCode:number):string{
     }
     return ''
 }
+
+// export const graphData = {
+//     labels: ['', '', '', ''],
+//     datasets: [
+//       {
+//         label: 'UV Index',
+//         data: [6, addInfo.uv_index_max],
+//         backgroundColor: [
+//           'rgba(255, 99, 132, 0)',
+//           'rgba(255, 191, 94,1)',
+//         ],
+//         borderColor: [
+//           'rgba(255, 99, 132, 0)',
+//           'rgba(54, 162, 235, 0)',
+//         ],
+//         borderWidth: 1,
+//       },
+//     ],
+//   };

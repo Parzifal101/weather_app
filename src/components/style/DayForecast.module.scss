@@ -1,0 +1,82 @@
+.weekForecast__day {
+    width: 13%;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s ease-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    .weekForecast__imgWrapper {
+        width: 100%;
+        height: 64px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 20px;
+
+        span {
+            opacity: 0.4;
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+
+        .weekForecast__day {
+            width: 100%;
+            height: 206px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.5s ease-out;
+            display: inline-block;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            &:hover {
+                transform: scale(1);
+            }
+
+            .weekForecast__imgWrapper {
+                width: 100%;
+                height: 84px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 20px;
+
+                span {
+                    opacity: 0.4;
+                }
+            }
+        }
+}

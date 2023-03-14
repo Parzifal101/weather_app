@@ -24,3 +24,14 @@ export interface IWeather {
         windspeed_120m:Array<number>,
     }
 }
+
+export interface IAddInfo{
+    sunrise: string, 
+      sunset: string, 
+      uv_index_max: number, 
+      windspeed_120m: number, 
+      winddirection: number, 
+      humidity: number, 
+      pressure: number, 
+      visibility: number 
+}

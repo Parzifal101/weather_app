@@ -3,7 +3,7 @@ import styles from './style/Search.module.scss'
 
 
 
-export function Search({setValue,fetch}:any){
+export function Search({setValue,fetch,fetchGeo}:any){
     const [input,setInput] = useState('');
     
     function inpHandler(e:any){
@@ -13,7 +13,7 @@ export function Search({setValue,fetch}:any){
     }
     function submitSearch(e:any){
         e.preventDefault();
-        fetch();
+        fetchGeo();
     }
     return(
         <div className={styles.search}>
